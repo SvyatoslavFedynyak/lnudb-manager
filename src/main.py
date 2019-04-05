@@ -19,7 +19,7 @@ class mainWindow(QWidget):
         btn.setToolTip('This is a <b>QPushButton</b> widget')
         btn.resize(btn.sizeHint())
         btn.move(50, 50)       
-        
+
         self.setLabels()
         self.setGeometry(200, 70, 1000, 600)
         self.setWindowTitle('Cloud Manager')  
@@ -27,16 +27,11 @@ class mainWindow(QWidget):
 
     def setLabels(self):
         
-        vmLabel = QLabel()
-        vmCountLabel = QLabel()
+        vmLabel = QLabel('Virtual Machines', self)
+        vmCountLabel = QLabel('10', self)
         
-        
-        
-        vmLabel.setText('Virtual Machines')
-        vmLabel.setGeometry(200, 300, 100, 100)
-        vmCountLabel.setText('10')
-        vmCountLabel.setGeometry(300, 300, 100, 100)
-        
+        vmLabel.setGeometry(300, 200, 100, 100)
+        vmCountLabel.setGeometry(300, 300, 100, 100)       
 
 if __name__ == '__main__':
     
